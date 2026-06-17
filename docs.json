@@ -41,31 +41,6 @@
             ]
           }
         ]
-      },
-      {
-        "anchor": "playit.gg",
-        "icon": "globe",
-        "href": "https://playit.gg"
-      },
-      {
-        "anchor": "Download agent",
-        "icon": "download",
-        "href": "https://playit.gg/download"
-      },
-      {
-        "anchor": "Premium (TCP tunnels)",
-        "icon": "credit-card",
-        "href": "https://playit.gg/account/billing/shop/premium"
-      },
-      {
-        "anchor": "Pricing & plans",
-        "icon": "tag",
-        "href": "https://playit.gg/pricing"
-      },
-      {
-        "anchor": "GitHub addon",
-        "icon": "github",
-        "href": "https://github.com/sin-boo/multi-user-playit"
       }
     ]
   },
