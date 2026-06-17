@@ -12,31 +12,80 @@ A playit.gg **Premium** subscription is required for TCP tunnels.
 
 ## 1. Create an account
 
-Go to [playit.gg](https://playit.gg) and click **Get started**.
-
-<img src="/images/playit-homepage.png" alt="playit.gg homepage" />
+<Columns cols={2}>
+  <div>
+    Go to [playit.gg](https://playit.gg) and click **Get started**. Follow the prompts to create your account.
+  </div>
+  <img
+    src="/images/playit-homepage.png"
+    alt="playit.gg homepage"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
 ## 2. Subscribe to Premium
 
-Go to [playit.gg/pricing](https://playit.gg/pricing) and choose **Premium**.
+<Columns cols={2}>
+  <div>
+    Go to [playit.gg/pricing](https://playit.gg/pricing) and choose **Premium**. Complete checkout to unlock TCP tunnels.
+  </div>
+  <img
+    src="/images/playit-pricing.png"
+    alt="playit.gg pricing page"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
-<img src="/images/playit-pricing.png" alt="playit.gg pricing page" />
+## 3. Download and install the agent
 
-## 3. Download and run the agent
+<Columns cols={2}>
+  <div>
+    Go to [playit.gg/account/agents](https://playit.gg/account/agents). Download the installer for your system — **Windows Installer (64-bit)** is recommended for Windows 10/11. Run the installer to complete setup.
+  </div>
+  <img
+    src="/images/playit-download-agent.png"
+    alt="playit.gg agent download page"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
-Go to [playit.gg/account/agents](https://playit.gg/account/agents) and download the **Windows Installer (64-bit)**.
+## 4. Open Playit.gg
 
-<img src="/images/playit-download-agent.png" alt="playit.gg agent download page" />
+<Columns cols={2}>
+  <div>
+    Open the Windows **Start** menu, search for `playit.gg`, and launch **Playit.gg**.
+  </div>
+  <img
+    src="/images/playit-windows-search.png"
+    alt="Windows search for Playit.gg"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
-Run the installer, then open **Playit.gg** from the Windows Start menu.
+## 5. Complete setup
 
-<img src="/images/playit-windows-search.png" alt="Windows search for Playit.gg" />
+<Columns cols={2}>
+  <div>
+    Sign in with your playit.gg account and follow the on-screen prompts until you see **Your agent is set up and connected!** Click **Create a tunnel** to continue.
+  </div>
+  <img
+    src="/images/playit-agent-connected.png"
+    alt="playit.gg agent connected"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
-Sign in and complete setup until your agent is connected. Click **Create a tunnel**.
-
-<img src="/images/playit-agent-connected.png" alt="playit.gg agent connected" />
-
-## 4. Create a tunnel
+## Create a tunnel
 
 Create a custom **TCP** tunnel with these settings:
 
@@ -48,11 +97,9 @@ Create a custom **TCP** tunnel with these settings:
 | Local port | `5555` |
 | Proxy protocol | None |
 
-When playit asks setup questions, use answers like **multiplayer blender** for the software description, confirm lawful use, and pick the **Premium Network** datacenter closest to you.
+When playit asks setup questions, use **multiplayer blender** for the software description, confirm lawful use, and pick the **Premium Network** datacenter closest to you. Copy your public join address (for example, `my-tunnel.gl.at.ply.gg:41234`) and share it with joiners.
 
-Copy your public join address (for example, `my-tunnel.gl.at.ply.gg:41234`) and share it with joiners.
-
-## 5. Host in Blender
+## Host in Blender
 
 1. Open the **Multi-User** panel.
 2. Set port to `5555` and click **Host**.
