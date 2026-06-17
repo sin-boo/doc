@@ -32,10 +32,9 @@
           {
             "group": "Getting started",
             "icon": "rocket",
-            "root": "introduction",
+            "root": "getting-started",
             "expanded": true,
             "pages": [
-              "introduction",
               "getting-started"
             ]
           }
