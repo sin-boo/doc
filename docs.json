@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Multi-user Playit",
-  "description": "Documentation for Multi-user Playit.",
+  "description": "Documentation for the Multi-user Playit fork — collaborative Blender over playit.gg.",
   "theme": "mint",
   "colors": {
     "primary": "#6366f1",
