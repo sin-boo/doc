@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Multi-user Playit",
-  "description": "Create a playit.gg tunnel for Multi-user Playit.",
+  "description": "Documentation for Multi-user Playit — collaborative Blender sessions over playit.gg.",
   "theme": "mint",
   "colors": {
     "primary": "#6366f1",
@@ -32,9 +32,10 @@
           {
             "group": "Getting started",
             "icon": "rocket",
-            "root": "getting-started",
+            "root": "introduction",
             "expanded": true,
             "pages": [
+              "introduction",
               "getting-started"
             ]
           }

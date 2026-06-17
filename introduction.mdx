@@ -1,0 +1,72 @@
+---
+title: "Introduction"
+description: "Host collaborative Blender sessions over the internet with Multi-user Playit and playit.gg."
+icon: "book-open"
+---
+
+This site documents **[Multi-user Playit](https://github.com/sin-boo/multi-user-playit)** — a [playit.gg](https://playit.gg)-optimized fork of [Multi-User for Blender](https://gitlab.com/slumber/multi-user) by Swann Martinez.
+
+Use this fork for internet hosting over a playit.gg tunnel. For general addon usage on a local network, see the [original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html).
+
+## How it works
+
+The fork keeps the same collaborative Blender workflow but replaces manual port forwarding with a playit.gg **TCP** tunnel:
+
+1. Install the Multi-user Playit addon in Blender.
+2. Set up playit.gg on the host PC — account, Premium subscription, agent, and tunnel.
+3. Host a session in Blender and share the public playit address with joiners.
+
+## Important links
+
+| Link | Purpose |
+| --- | --- |
+| [playit.gg](https://playit.gg) | Sign up and manage your account |
+| [Download agent](https://playit.gg/download) | Install the playit.gg program on the host PC |
+| [Premium subscription](https://playit.gg/pricing) | Required for TCP custom tunnels |
+| [Multi-user Playit addon](https://github.com/sin-boo/multi-user-playit) | This fork — download and install in Blender |
+| [Original Multi-User (GitLab)](https://gitlab.com/slumber/multi-user) | Upstream Blender addon source |
+| [Original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html) | UI, settings, and LAN usage |
+
+<Warning>
+This fork is under active development. It has been tested on Windows; use at your own risk.
+</Warning>
+
+<Note>
+TCP custom tunnels require a playit.gg **Premium** subscription. Download and sign in to the agent before creating your tunnel.
+</Note>
+
+## Install the addon
+
+No official release yet — install from the GitHub repository:
+
+1. Clone or download [sin-boo/multi-user-playit](https://github.com/sin-boo/multi-user-playit).
+2. Zip the `multi_user` folder, or use a pre-built `multi_user-*.zip` from [Releases](https://github.com/sin-boo/multi-user-playit/releases) if one is available.
+3. In Blender: **Edit → Preferences → Add-ons → Install from disk** → select the zip.
+
+Dependencies are installed into Blender's Python automatically during setup.
+
+## Quick start
+
+<CardGroup cols={2}>
+  <Card title="Set up playit.gg" icon="network" href="/getting-started">
+    Step-by-step account, agent, and tunnel configuration for the host PC.
+  </Card>
+  <Card title="Original Multi-User docs" icon="book" href="https://slumber.gitlab.io/multi-user/index.html">
+    General addon usage — UI reference and LAN sessions.
+  </Card>
+</CardGroup>
+
+After playit.gg is configured:
+
+1. In Blender, open the **Multi-User** panel.
+2. Under **Hosting**, set your port (default `5555`) and click **Host**.
+3. Share the playit join address (e.g. `my-tunnel.gl.at.ply.gg:41234`) with joiners.
+
+### Join from another PC
+
+Joiners also need the addon installed. Then:
+
+1. In Blender, open **Multi-User → Server list**.
+2. Click **+ Add server preset**.
+3. Paste the **full** playit address into the **IP** field (e.g. `my-tunnel.gl.at.ply.gg:41234`). The port is parsed automatically.
+4. Click **Connect**.
