@@ -1,0 +1,30 @@
+---
+title: "Local development"
+description: "Preview documentation changes on your machine before pushing."
+icon: "terminal"
+---
+
+Install the Mintlify CLI and start a local dev server from the repository root.
+
+```bash
+npm i -g mint
+mint dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to preview the site.
+
+## Authoring
+
+1. Add or edit `.mdx` files (YAML frontmatter with at least `title`).
+2. Register each page slug in `docs.json` under `navigation`.
+3. Commit and push to `main` after connecting the repo to Mintlify.
+
+## Mintlify dashboard setup
+
+1. Sign in at [dashboard.mintlify.com](https://dashboard.mintlify.com).
+2. Create a new docs project (or open an existing one).
+3. Connect GitHub and select **`sin-boo/doc`** on branch **`main`**.
+4. Install the Mintlify GitHub app when prompted so pushes deploy automatically.
+5. Optional: add a custom domain under **Settings → Domain**.
+
+After the first deploy, your site is available at a `*.mintlify.app` URL unless you configure a custom domain.
