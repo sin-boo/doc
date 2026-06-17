@@ -37,15 +37,6 @@
             "pages": [
               "getting-started"
             ]
-          },
-          {
-            "group": "Tunnel setup",
-            "icon": "network",
-            "root": "playit-tunnel",
-            "expanded": true,
-            "pages": [
-              "playit-tunnel"
-            ]
           }
         ]
       }
