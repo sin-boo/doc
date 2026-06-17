@@ -30,8 +30,17 @@
         "icon": "book-open",
         "groups": [
           {
-            "group": "Tunnel setup",
+            "group": "Getting started",
             "icon": "rocket",
+            "root": "getting-started",
+            "expanded": true,
+            "pages": [
+              "getting-started"
+            ]
+          },
+          {
+            "group": "Tunnel setup",
+            "icon": "network",
             "root": "playit-tunnel",
             "expanded": true,
             "pages": [
