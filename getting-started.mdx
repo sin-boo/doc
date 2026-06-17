@@ -4,13 +4,7 @@ description: "Set up playit.gg and host a Multi-user Playit session."
 icon: "rocket"
 ---
 
-[Multi-user Playit](https://github.com/sin-boo/multi-user-playit) is a [playit.gg](https://playit.gg) fork for hosting collaborative Blender sessions over the internet. Install the addon in Blender, then follow these steps on the host PC.
-
-<Info>
-**This is a fork.** The original **[Multi-User for Blender](https://gitlab.com/slumber/multi-user)** was created by **[Swann Martinez](https://gitlab.com/slumber)**. Multi-user Playit adapts that addon for playit.gg — it is not the official release.
-
-For the original addon, documentation, and community, see the [Multi-User project on GitLab](https://gitlab.com/slumber/multi-user) and join the official [Discord server](https://discord.gg/aBPvGws).
-</Info>
+[Multi-user Playit](https://github.com/sin-boo/multi-user-playit) is a [playit.gg](https://playit.gg) fork of [Multi-User for Blender](https://gitlab.com/slumber/multi-user), the original addon created by [Swann Martinez](https://gitlab.com/slumber). This fork adapts Multi-User for internet hosting over playit.gg — it is not the official release. For the original addon, docs, and community, visit the [Multi-User project on GitLab](https://gitlab.com/slumber/multi-user) or join the [official Discord](https://discord.gg/aBPvGws).
 
 <Note>
 A playit.gg **Premium** subscription is required for TCP tunnels.
@@ -50,11 +44,11 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 3. Download and install the agent
+## 3. Download, install, and open the agent
 
 <Columns cols={2}>
   <div>
-    Go to [playit.gg/account/agents](https://playit.gg/account/agents). Download the installer for your system — **Windows Installer (64-bit)** is recommended for Windows 10/11. Run the installer to complete setup.
+    Go to [playit.gg/account/agents](https://playit.gg/account/agents) and download the **Windows Installer (64-bit)**. Run the installer, then open **Playit.gg** from the Windows **Start** menu.
   </div>
   <img
     src="/images/playit-download-agent.png"
@@ -65,11 +59,9 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 4. Open Playit.gg
-
 <Columns cols={2}>
   <div>
-    Open the Windows **Start** menu, search for `playit.gg`, and launch **Playit.gg**.
+    Search for `playit.gg` in the Start menu and launch the app.
   </div>
   <img
     src="/images/playit-windows-search.png"
@@ -80,26 +72,11 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 5. Complete setup
+## 4. Create your tunnel
 
 <Columns cols={2}>
   <div>
-    Sign in with your playit.gg account and follow the on-screen prompts until you see **Your agent is set up and connected!** Click **Create a tunnel** to continue.
-  </div>
-  <img
-    src="/images/playit-agent-connected.png"
-    alt="playit.gg agent connected"
-    noZoom
-    className="rounded-lg"
-    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
-  />
-</Columns>
-
-## 6. Create a tunnel
-
-<Columns cols={2}>
-  <div>
-    Fill in the tunnel form with these settings:
+    Sign in with your playit.gg account and follow the prompts until your agent is connected. Click **Create a tunnel**, then fill in the form:
 
     - **Name:** `blender` (or any name you prefer)
     - **Tunnel type:** TCP
@@ -112,7 +89,7 @@ This fork is under active development and may contain bugs. It has been tested o
     - **Local port:** `5555`
     - **Proxy protocol:** None
 
-    Click **Next** to finish.
+    Click **Next** to finish. On the **Tunnels** page, copy the address in the **orange box** at the top (for example, `protocols-yards.with.playit.plus:1209`) and share it with joiners.
   </div>
   <img
     src="/images/playit-tunnel-setup.png"
@@ -123,11 +100,9 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 7. Copy your join address
-
 <Columns cols={2}>
   <div>
-    After the tunnel is created, open the **Tunnels** page. Copy the address shown in the **orange box** at the top (for example, `protocols-yards.with.playit.plus:1209`). Share this with anyone joining your session.
+    The orange box shows your public join address — this is what you share with anyone connecting to your session.
   </div>
   <img
     src="/images/playit-tunnel-address.png"
@@ -138,13 +113,19 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 8. Host in Blender
+## 5. Download and install the addon
+
+Go to the [Multi-user Playit releases on GitHub](https://github.com/sin-boo/multi-user-playit/releases) and download the latest version. In Blender, open **Edit → Preferences → Add-ons → Install** and select the downloaded file.
+
+## 6. Host and join in Blender
 
 <Columns cols={2}>
   <div>
-    Open **Playit.gg**, then in Blender open the **Multi-User** panel. Make sure port is set to `5555` and click **Host**.
+    **To host:** Open **Playit.gg**, then in Blender open the **Multi-User** panel. Set port to `5555` and click **Host**.
 
-    After the first setup, this is all you need to do each time you want to host — open Playit.gg and press **Host**. You do not need to repeat the steps above.
+    After the first setup, hosting is just open Playit.gg and press **Host** — you do not need to repeat the steps above.
+
+    **To join:** Open the **Multi-User** panel, click **+** to add a server preset, paste the playit address from the orange box into the **IP** field, click **OK**, then **Connect**. Once saved, you can reconnect anytime.
   </div>
   <img
     src="/images/blender-host.png"
@@ -155,17 +136,9 @@ This fork is under active development and may contain bugs. It has been tested o
   />
 </Columns>
 
-## 9. Join a session
-
 <Columns cols={2}>
   <div>
-    On the joining PC, open the **Multi-User** panel in Blender:
-
-    1. Click the **+** button to add a server preset.
-    2. Paste the playit address into the **IP** field (the address from the orange box, e.g. `protocols-yards.with.playit.plus:1209`).
-    3. Click **OK**, then click **Connect**.
-
-    Once the server is saved, you can reconnect anytime without re-entering the address.
+    Click **+** to add a server, paste the playit address in the **IP** field, then connect.
   </div>
   <img
     src="/images/blender-add-server.png"
