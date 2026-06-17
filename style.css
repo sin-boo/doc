@@ -1,6 +1,9 @@
 #assistant-entry,
 #assistant-entry-mobile,
 #chat-assistant-sheet,
-chat-assistant-floating-input {
+#chat-assistant-textarea,
+.chat-assistant-floating-input,
+[class*="chat-assistant-floating-input"],
+[class*="group/assistant-bar"] {
   display: none !important;
 }
