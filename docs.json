@@ -17,18 +17,55 @@
   "icons": {
     "library": "lucide"
   },
-  "contextual": {
-    "options": ["copy", "chatgpt", "claude", "cursor", "vscode"]
-  },
   "navigation": {
-    "groups": [
+    "anchors": [
       {
-        "group": "Getting started",
-        "pages": ["introduction", "playit-tunnel"]
+        "anchor": "Documentation",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Getting started",
+            "icon": "rocket",
+            "root": "introduction",
+            "expanded": true,
+            "pages": [
+              "introduction",
+              "playit-tunnel"
+            ]
+          },
+          {
+            "group": "Contributors",
+            "icon": "terminal",
+            "pages": [
+              "local-development"
+            ]
+          }
+        ]
       },
       {
-        "group": "Contributors",
-        "pages": ["local-development"]
+        "anchor": "playit.gg",
+        "icon": "globe",
+        "href": "https://playit.gg"
+      },
+      {
+        "anchor": "Download agent",
+        "icon": "download",
+        "href": "https://playit.gg/download"
+      },
+      {
+        "anchor": "Premium (TCP tunnels)",
+        "icon": "credit-card",
+        "href": "https://playit.gg/account/billing/shop/premium"
+      },
+      {
+        "anchor": "Pricing & plans",
+        "icon": "tag",
+        "href": "https://playit.gg/pricing"
+      },
+      {
+        "anchor": "GitHub addon",
+        "icon": "github",
+        "href": "https://github.com/sin-boo/multi-user-playit"
       }
     ]
   },
