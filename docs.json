@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Multi-user Playit",
-  "description": "Setup guide for Multi-user Playit — install, tunnel, host, and join.",
+  "description": "Create a playit.gg tunnel for Multi-user Playit.",
   "theme": "mint",
   "colors": {
     "primary": "#6366f1",
@@ -30,20 +30,12 @@
         "icon": "book-open",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Tunnel setup",
             "icon": "rocket",
-            "root": "introduction",
+            "root": "playit-tunnel",
             "expanded": true,
             "pages": [
-              "introduction",
               "playit-tunnel"
-            ]
-          },
-          {
-            "group": "Contributors",
-            "icon": "terminal",
-            "pages": [
-              "local-development"
             ]
           }
         ]
