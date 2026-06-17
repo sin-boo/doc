@@ -1,26 +1,49 @@
 ---
 title: "Introduction"
-description: "Welcome to Multi-user Playit documentation."
+description: "Host collaborative Blender sessions over the internet with Multi-user Playit and playit.gg."
 icon: "book-open"
 ---
 
-Welcome to **Multi-user Playit** documentation.
+**Multi-user Playit** is a [playit.gg](https://playit.gg)-optimized fork of [Multi-User for Blender](https://gitlab.com/slumber/multi-user). It lets several people work on the same Blender scene over the network without port forwarding or manual firewall setup.
 
-This repository is the source for a [Mintlify](https://mintlify.com) documentation site.
+Install the addon from [GitHub](https://github.com/sin-boo/multi-user-playit), run the playit.gg agent on the host machine, create a TCP tunnel with the settings in this guide, and share the public address so others can join.
 
-Edit pages as `.mdx` files in this repo, update navigation in `docs.json`, and push to `main` to publish.
+<Warning>
+This project is under active development. It has been tested on Windows; use at your own risk.
+</Warning>
 
-## What you can document here
+## playit.gg links
 
-Use this site for product guides, architecture notes, runbooks, and internal references. Add new pages under the repo root (or a folder) and list them in `docs.json`.
-
-## Next steps
+You need a free playit.gg account to run tunnels. **TCP tunnels require [Playit Premium](https://playit.gg/support/playit-premium/)** on current plans — subscribe before creating the Multi-User tunnel.
 
 <CardGroup cols={2}>
-  <Card title="Local preview" icon="laptop" href="/local-development">
-    Run `mint dev` to preview changes on localhost.
+  <Card title="Download playit.gg" icon="download" href="https://playit.gg/download">
+    Get the playit agent for Windows, Linux, macOS, or Docker.
   </Card>
-  <Card title="Connect Mintlify" icon="github" href="https://dashboard.mintlify.com">
-    Link this GitHub repo in the Mintlify dashboard to deploy on every push.
+  <Card title="Subscribe to Premium" icon="credit-card" href="https://playit.gg/account/billing/shop/premium">
+    TCP tunnels (required for Multi-User) need Premium — about $3/month.
+  </Card>
+  <Card title="Pricing & plans" icon="tag" href="https://playit.gg/pricing">
+    Compare free vs Premium features before you subscribe.
+  </Card>
+  <Card title="Multi-user Playit addon" icon="github" href="https://github.com/sin-boo/multi-user-playit">
+    Clone or download the Blender addon from GitHub.
+  </Card>
+</CardGroup>
+
+## Quick start
+
+1. [Download](https://playit.gg/download) and sign in to the playit.gg agent.
+2. [Subscribe to Premium](https://playit.gg/account/billing/shop/premium) if you do not already have it.
+3. [Create the TCP tunnel](/playit-tunnel) with port count **3** and local port **5555** (or your Blender host port).
+4. In Blender: Multi-User panel → set **Port** → **Host**.
+5. Share the playit address (e.g. `my-tunnel.gl.at.ply.gg:41234`) with joiners.
+
+<CardGroup cols={2}>
+  <Card title="Create a tunnel" icon="network" href="/playit-tunnel">
+    Step-by-step tunnel settings for the host.
+  </Card>
+  <Card title="Original Multi-User docs" icon="book" href="https://slumber.gitlab.io/multi-user/index.html">
+    General addon usage (port forwarding guides are replaced by playit.gg here).
   </Card>
 </CardGroup>

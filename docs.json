@@ -24,13 +24,17 @@
     "groups": [
       {
         "group": "Getting started",
-        "pages": ["introduction", "local-development"]
+        "pages": ["introduction", "playit-tunnel"]
+      },
+      {
+        "group": "Contributors",
+        "pages": ["local-development"]
       }
     ]
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/sin-boo/doc"
+      "github": "https://github.com/sin-boo/multi-user-playit"
     }
   }
 }
