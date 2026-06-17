@@ -2,8 +2,18 @@
 #assistant-entry-mobile,
 #chat-assistant-sheet,
 #chat-assistant-textarea,
+#text-selection-tooltip,
+#text-selection-tooltip-button,
+#ask-assistant-code-block-button,
 .chat-assistant-floating-input,
 [class*="chat-assistant-floating-input"],
-[class*="group/assistant-bar"] {
+[class*="group/assistant-bar"],
+chat-assistant-sheet,
+chat-assistant-floating-input,
+chat-assistant-input,
+chat-assistant-send-button,
+chat-assistant-disclaimer-text,
+chat-assistant-payload-item,
+starter-question-text {
   display: none !important;
 }

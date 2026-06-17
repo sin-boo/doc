@@ -17,6 +17,12 @@
   "icons": {
     "library": "lucide"
   },
+  "contextual": {
+    "options": [
+      "copy",
+      "view"
+    ]
+  },
   "navigation": {
     "anchors": [
       {
