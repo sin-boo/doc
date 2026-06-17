@@ -6,16 +6,20 @@ icon: "book-open"
 
 ## Overview
 
-**Multi-user Playit** is a Blender addon fork of [Multi-User](https://gitlab.com/slumber/multi-user). It lets multiple Blender instances work on the same `.blend` file over the network using a client/server setup.
+**Multi-user Playit** is a version of the original [Multi-User](https://gitlab.com/slumber/multi-user) Blender addon, maintained at [github.com/sin-boo/multi-user-playit](https://github.com/sin-boo/multi-user-playit). The original lets several people work on the same `.blend` file over the network. Multi-user Playit keeps that same idea but uses [playit.gg](https://playit.gg) so hosting and joining a session over the internet is simpler — no port forwarding or manual firewall setup on the host.
 
-This fork is configured for internet sessions through [playit.gg](https://playit.gg). The host runs the playit.gg agent and a TCP tunnel instead of opening ports on a router.
+**For you (host):** run the playit.gg agent, create a TCP tunnel, and click **Host** in Blender.
+
+**For others (joiners):** install the addon, paste the tunnel address the host gives you, and connect.
+
+These docs cover that setup. The [original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html) still apply for the Blender panel, LAN sessions, and general addon behavior.
 
 | Topic | Covered here | See instead |
 | --- | --- | --- |
 | Install addon, playit.gg tunnel, host/join over internet | Yes | — |
 | Blender panel, LAN sessions, general addon behavior | No | [Original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html) |
-| Addon source (this fork) | — | [github.com/sin-boo/multi-user-playit](https://github.com/sin-boo/multi-user-playit) |
-| Upstream source | — | [gitlab.com/slumber/multi-user](https://gitlab.com/slumber/multi-user) |
+| This version (Multi-user Playit) | — | [github.com/sin-boo/multi-user-playit](https://github.com/sin-boo/multi-user-playit) |
+| Original addon | — | [gitlab.com/slumber/multi-user](https://gitlab.com/slumber/multi-user) |
 
 <Warning>
 Active development. Tested on Windows only. Host and join at your own risk.
