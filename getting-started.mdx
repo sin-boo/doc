@@ -85,19 +85,33 @@ A playit.gg **Premium** subscription is required for TCP tunnels.
   />
 </Columns>
 
-## Create a tunnel
+## 6. Create a tunnel
 
-Create a custom **TCP** tunnel with these settings:
+<Columns cols={2}>
+  <div>
+    Fill in the tunnel form with these settings:
 
-| Setting | Value |
-| --- | --- |
-| Protocol | TCP |
-| Port count | 3 |
-| Local IP | `127.0.0.1` |
-| Local port | `5555` |
-| Proxy protocol | None |
+    - **Name:** `blender` (or any name you prefer)
+    - **Tunnel type:** TCP
+    - **Port count:** 3
+    - **Software description:** `blender for addon`
+    - **Usage confirmation:** Confirmed
+    - **Public endpoint:** Premium Network — closest datacenter to you
+    - **Assign to agent:** Your connected agent
+    - **Local IP:** `127.0.0.1`
+    - **Local port:** `5555`
+    - **Proxy protocol:** None
 
-When playit asks setup questions, use **multiplayer blender** for the software description, confirm lawful use, and pick the **Premium Network** datacenter closest to you. Copy your public join address (for example, `my-tunnel.gl.at.ply.gg:41234`) and share it with joiners.
+    Click **Next** to finish. Copy your public join address (for example, `my-tunnel.gl.at.ply.gg:41234`) and share it with joiners.
+  </div>
+  <img
+    src="/images/playit-tunnel-setup.png"
+    alt="playit.gg tunnel setup form"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
 ## Host in Blender
 
