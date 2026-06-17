@@ -1,10 +1,10 @@
 ---
 title: "Create a playit.gg tunnel"
-description: "TCP tunnel settings for hosting Multi-user Playit sessions over the internet."
+description: "TCP tunnel field values for Multi-user Playit on the host PC."
 icon: "network"
 ---
 
-This guide is for the [Multi-user Playit](https://github.com/sin-boo/multi-user-playit) fork. The addon uses **three consecutive TCP ports** on the host machine:
+Multi-user Playit binds to **three consecutive TCP ports** on the host:
 
 | Port | Role | Default |
 | --- | --- | --- |
@@ -12,66 +12,65 @@ This guide is for the [Multi-user Playit](https://github.com/sin-boo/multi-user-
 | Base + 1 | Data | `5556` |
 | Base + 2 | TTL | `5557` |
 
-The playit tunnel must expose all three ports with a single tunnel that has **port count 3**.
+One playit.gg tunnel must forward all three. Set **port count** to **3** and **local port** to the same value as the **Host** port in Blender (default `5555`).
 
 <Note>
-TCP tunnels require a [playit.gg subscription](https://playit.gg/account/billing/shop/premium). [Download the agent](https://playit.gg/download) first if you have not already.
+Custom TCP tunnels require a [playit.gg subscription](https://playit.gg/account/billing/shop/premium). Install and sign in to the [agent](https://playit.gg/download) first.
 </Note>
 
-## Before you start
+## Agent setup (host PC)
 
 <Steps>
-  <Step title="Download the playit.gg agent">
-    Install from [playit.gg/download](https://playit.gg/download) and sign in with your account.
+  <Step title="Install the agent">
+    Download from [playit.gg/download](https://playit.gg/download) and sign in.
   </Step>
-  <Step title="Subscribe">
-    Open [playit.gg/account/billing/shop/premium](https://playit.gg/account/billing/shop/premium) and activate your subscription. TCP custom tunnels are not available on the free tier.
+  <Step title="Activate subscription">
+    TCP custom tunnels are not on the free tier. Subscribe at [playit.gg/account/billing/shop/premium](https://playit.gg/account/billing/shop/premium).
   </Step>
-  <Step title="Run the agent">
-    Keep the playit program running on the PC that will **host** the Blender session.
+  <Step title="Keep agent running">
+    The agent must stay open on the machine that hosts the Blender session.
   </Step>
 </Steps>
 
-## Tunnel settings (host)
+## Tunnel fields
 
-In the playit.gg dashboard or agent, create a **custom** tunnel with these values:
+Create a **custom** tunnel in the playit.gg dashboard or agent:
 
-| Setting | Value |
+| Field | Value |
 | --- | --- |
 | Protocol / tunnel type | **TCP** |
 | Port count | **3** |
 | Local IP | `127.0.0.1` |
-| Local port | Same as Blender **Host** port (default **`5555`**) |
-| Proxy Protocol | **None** / **Disabled** (not Auto, not v1/v2) |
+| Local port | Blender **Host** port (default **`5555`**) |
+| Proxy Protocol | **None** or **Disabled** — not Auto, v1, or v2 |
 
 <Warning>
-Do **not** use UDP, HTTPS, or SSH tunnel types for Multi-User. Joiners must use the **public base port** from playit, not your local `5555`.
+Do not use UDP, HTTPS, or SSH. Joiners connect to the **public** hostname and base port from playit, not `127.0.0.1:5555`.
 </Warning>
 
-After the tunnel is created, copy the public address from playit — hostname plus the **base** public port (example: `my-tunnel.gl.at.ply.gg:41234`).
+When the tunnel is active, note the public address: hostname plus the **base** public port (example: `my-tunnel.gl.at.ply.gg:41234`).
 
 ## Host in Blender
 
-1. Open Blender with the [Multi-user Playit](https://github.com/sin-boo/multi-user-playit) addon enabled.
-2. Open the **Multi-User** panel.
-3. Under **Hosting**, set your port (default `5555`).
-4. Click **Host**.
+1. Enable the Multi-user Playit addon.
+2. **Multi-User** panel → **Hosting** → **Port** = tunnel local port (default `5555`).
+3. Click **Host**.
 
-You are now hosting locally on ports `5555`–`5557`; playit forwards the matching public ports to them.
+Blender listens on `5555`–`5557` locally. playit maps those to the tunnel's public ports.
 
 ## Join from another PC
 
-Joiners also need the addon installed (same fork or compatible build). Then:
+The joiner needs the addon installed.
 
-1. In Blender, open **Multi-User** → **Server list**.
-2. Click **+ Add server preset**.
-3. Paste the **full** playit address into the **IP** field (e.g. `my-tunnel.gl.at.ply.gg:41234`). The port is parsed automatically.
-4. Click **Connect**.
+1. **Multi-User** → **Server list** → **+ Add server preset**.
+2. **IP**: paste the full playit address (e.g. `my-tunnel.gl.at.ply.gg:41234`).
+3. **Connect**.
 
 ## Troubleshooting
 
-- **Connection fails for joiners** — Confirm they use the playit public address and base port, not `127.0.0.1:5555`.
-- **Tunnel type errors** — Recreate the tunnel as **TCP** with **port count 3** and Proxy Protocol **disabled**.
-- **Subscription required** — If TCP custom tunnels are unavailable, check your [playit.gg subscription](https://playit.gg/account/billing/shop/premium) is active on the host account.
+- **Joiner cannot connect** — Address must be the playit public hostname and base port, not the host's LAN IP or `127.0.0.1`.
+- **Wrong tunnel type** — Delete and recreate as **TCP**, port count **3**, Proxy Protocol off.
+- **TCP option missing** — Confirm [subscription](https://playit.gg/account/billing/shop/premium) is active on the host's playit.gg account.
+- **Port mismatch** — Tunnel local port and Blender **Host** port must match.
 
-For general addon behavior (UI, settings, LAN hosting), see the [original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html). For install notes and upstream credits, see the [multi-user-playit README](https://github.com/sin-boo/multi-user-playit/blob/main/README.md).
+For UI and settings outside playit.gg, use the [original Multi-User docs](https://slumber.gitlab.io/multi-user/index.html).
