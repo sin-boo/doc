@@ -102,7 +102,7 @@ A playit.gg **Premium** subscription is required for TCP tunnels.
     - **Local port:** `5555`
     - **Proxy protocol:** None
 
-    Click **Next** to finish. Copy your public join address (for example, `my-tunnel.gl.at.ply.gg:41234`) and share it with joiners.
+    Click **Next** to finish.
   </div>
   <img
     src="/images/playit-tunnel-setup.png"
@@ -113,10 +113,55 @@ A playit.gg **Premium** subscription is required for TCP tunnels.
   />
 </Columns>
 
-## Host in Blender
+## 7. Copy your join address
 
-1. Open the **Multi-User** panel.
-2. Set port to `5555` and click **Host**.
-3. Share the playit address with anyone joining.
+<Columns cols={2}>
+  <div>
+    After the tunnel is created, open the **Tunnels** page. Copy the address shown in the **orange box** at the top (for example, `protocols-yards.with.playit.plus:1209`). Share this with anyone joining your session.
+  </div>
+  <img
+    src="/images/playit-tunnel-address.png"
+    alt="playit.gg tunnel page showing the public address in the orange box"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
 
-To join from another PC: open **Server list**, add a server preset, paste the full playit address, and click **Connect**.
+## 8. Host in Blender
+
+<Columns cols={2}>
+  <div>
+    Open **Playit.gg**, then in Blender open the **Multi-User** panel. Make sure port is set to `5555` and click **Host**.
+
+    After the first setup, this is all you need to do each time you want to host — open Playit.gg and press **Host**. You do not need to repeat the steps above.
+  </div>
+  <img
+    src="/images/blender-host.png"
+    alt="Blender Multi-User panel with the Host button"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
+
+## 9. Join a session
+
+<Columns cols={2}>
+  <div>
+    On the joining PC, open the **Multi-User** panel in Blender:
+
+    1. Click the **+** button to add a server preset.
+    2. Paste the playit address into the **IP** field (the address from the orange box, e.g. `protocols-yards.with.playit.plus:1209`).
+    3. Click **OK**, then click **Connect**.
+
+    Once the server is saved, you can reconnect anytime without re-entering the address.
+  </div>
+  <img
+    src="/images/blender-add-server.png"
+    alt="Blender Add server preset dialog with plus button and IP field"
+    noZoom
+    className="rounded-lg"
+    style={{ width: "100%", maxWidth: "360px", height: "auto" }}
+  />
+</Columns>
